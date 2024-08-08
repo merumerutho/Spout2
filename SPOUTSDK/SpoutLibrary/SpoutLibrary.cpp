@@ -2018,4 +2018,21 @@ extern "C" SPOUTAPI SPOUTHANDLE APIENTRY GetSpout()
 	return pSpout;
 }
 
+// External wrappers
+extern "C" SPOUTAPI bool APIENTRY SendImage_w(SPOUTHANDLE handle, const unsigned char* pixels, unsigned int width, unsigned int height, GLenum glFormat, bool bInvert)
+{
+	return handle->SendImage(pixels, width, height, glFormat, bInvert);
+}
+
+extern "C" SPOUTAPI bool APIENTRY SendFbo_w(SPOUTHANDLE handle, GLuint FboID, unsigned int width, unsigned int height, bool bInvert)
+{
+	return handle->SendFbo(FboID, width, height, bInvert);
+}
+
+extern "C" SPOUTAPI bool APIENTRY ReceiveImage_w(SPOUTHANDLE handle, unsigned char* pixels, GLenum glFormat, bool bInvert, GLuint HostFbo)
+{
+	return handle->ReceiveImage(pixels, glFormat, bInvert, HostFbo);
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////

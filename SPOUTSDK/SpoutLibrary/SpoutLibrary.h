@@ -535,4 +535,9 @@ typedef SPOUTLIBRARY* SPOUTHANDLE;
 // Factory function that creates an instance of the SPOUT object.
 extern "C" SPOUTAPI SPOUTHANDLE WINAPI GetSpout(VOID);
 
+// Wrapper functions outside of SPOUTLIBRARY scope
+extern "C" SPOUTAPI bool WINAPI SendImage_w(SPOUTHANDLE handle, const unsigned char* pixels, unsigned int width, unsigned int height, GLenum glFormat, bool bInvert);
+extern "C" SPOUTAPI bool WINAPI SendFbo_w(SPOUTHANDLE handle, GLuint FboID, unsigned int width, unsigned int height, bool bInvert);
+extern "C" SPOUTAPI bool WINAPI ReceiveImage_w(SPOUTHANDLE handle, unsigned char*	, GLenum glFormat, bool bInvert, GLuint HostFbo);
+
 ////////////////////////////////////////////////////////////////////////////////
