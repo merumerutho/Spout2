@@ -2019,6 +2019,11 @@ extern "C" SPOUTAPI SPOUTHANDLE APIENTRY GetSpout()
 }
 
 // External wrappers
+extern "C" SPOUTAPI void APIENTRY SetSenderName_w(SPOUTHANDLE handle, const char* sendername = nullptr)
+{
+	return handle->SetSenderName(sendername);
+}
+
 extern "C" SPOUTAPI bool APIENTRY SendImage_w(SPOUTHANDLE handle, const unsigned char* pixels, unsigned int width, unsigned int height, GLenum glFormat, bool bInvert)
 {
 	return handle->SendImage(pixels, width, height, glFormat, bInvert);
