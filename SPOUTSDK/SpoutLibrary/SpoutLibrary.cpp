@@ -2039,5 +2039,29 @@ extern "C" SPOUTAPI bool APIENTRY ReceiveImage_w(SPOUTHANDLE handle, unsigned ch
 	return handle->ReceiveImage(pixels, glFormat, bInvert, HostFbo);
 }
 
+extern "C" SPOUTAPI void APIENTRY SetReceiverName_w(SPOUTHANDLE handle, const char * SenderName = nullptr)
+{
+	return handle->SetReceiverName(SenderName);
+}
+
+extern "C" SPOUTAPI bool APIENTRY IsUpdated_w(SPOUTHANDLE handle)
+{
+	return handle->IsUpdated();
+}
+
+extern "C" SPOUTAPI unsigned int APIENTRY GetSenderWidth_w(SPOUTHANDLE handle)
+{
+	return handle->GetSenderWidth();
+}
+
+extern "C" SPOUTAPI unsigned int APIENTRY GetSenderHeight_w(SPOUTHANDLE handle)
+{
+	return handle->GetSenderHeight();
+}
+
+extern "C" SPOUTAPI bool APIENTRY IsFrameNew_w(SPOUTHANDLE handle)
+{
+	return handle->IsFrameNew();
+}
 
 ////////////////////////////////////////////////////////////////////////////////

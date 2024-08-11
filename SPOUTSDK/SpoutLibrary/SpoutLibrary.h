@@ -539,6 +539,11 @@ extern "C" SPOUTAPI SPOUTHANDLE WINAPI GetSpout(VOID);
 extern "C" SPOUTAPI void WINAPI SetSenderName_w(SPOUTHANDLE handle, const char* sendername);
 extern "C" SPOUTAPI bool WINAPI SendImage_w(SPOUTHANDLE handle, const unsigned char* pixels, unsigned int width, unsigned int height, GLenum glFormat, bool bInvert);
 extern "C" SPOUTAPI bool WINAPI SendFbo_w(SPOUTHANDLE handle, GLuint FboID, unsigned int width, unsigned int height, bool bInvert);
-extern "C" SPOUTAPI bool WINAPI ReceiveImage_w(SPOUTHANDLE handle, unsigned char*	, GLenum glFormat, bool bInvert, GLuint HostFbo);
+extern "C" SPOUTAPI bool WINAPI ReceiveImage_w(SPOUTHANDLE handle, unsigned char* pixels, GLenum glFormat, bool bInvert, GLuint HostFbo);
+extern "C" SPOUTAPI void WINAPI SetReceiverName_w(SPOUTHANDLE handle, const char * SenderName);
+extern "C" SPOUTAPI bool WINAPI IsUpdated_w(SPOUTHANDLE handle);
+extern "C" SPOUTAPI unsigned int WINAPI GetSenderWidth_w(SPOUTHANDLE handle);
+extern "C" SPOUTAPI unsigned int WINAPI GetSenderHeight_w(SPOUTHANDLE handle);
+extern "C" SPOUTAPI bool WINAPI IsFrameNew_w(SPOUTHANDLE handle);
 
 ////////////////////////////////////////////////////////////////////////////////
