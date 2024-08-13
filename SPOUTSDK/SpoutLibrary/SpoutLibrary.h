@@ -545,5 +545,7 @@ extern "C" SPOUTAPI bool WINAPI IsUpdated_w(SPOUTHANDLE handle);
 extern "C" SPOUTAPI unsigned int WINAPI GetSenderWidth_w(SPOUTHANDLE handle);
 extern "C" SPOUTAPI unsigned int WINAPI GetSenderHeight_w(SPOUTHANDLE handle);
 extern "C" SPOUTAPI bool WINAPI IsFrameNew_w(SPOUTHANDLE handle);
-
+extern "C" SPOUTAPI bool WINAPI IsConnected_w(SPOUTHANDLE handle);
+extern "C" SPOUTAPI long WINAPI GetSenderFrame_w(SPOUTHANDLE handle);
+extern "C" SPOUTAPI const char * WINAPI GetSenderName_w(SPOUTHANDLE handle);
 ////////////////////////////////////////////////////////////////////////////////

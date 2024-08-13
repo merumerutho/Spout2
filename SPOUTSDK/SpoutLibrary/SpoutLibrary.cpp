@@ -2064,4 +2064,19 @@ extern "C" SPOUTAPI bool APIENTRY IsFrameNew_w(SPOUTHANDLE handle)
 	return handle->IsFrameNew();
 }
 
+extern "C" SPOUTAPI bool APIENTRY IsConnected_w(SPOUTHANDLE handle)
+{
+	return handle->IsConnected();
+}
+
+extern "C" SPOUTAPI long APIENTRY GetSenderFrame_w(SPOUTHANDLE handle)
+{
+	return handle->GetSenderFrame();
+}
+
+extern "C" SPOUTAPI const char *  APIENTRY GetSenderName_w(SPOUTHANDLE handle)
+{
+	return handle->GetSenderName();
+}
+
 ////////////////////////////////////////////////////////////////////////////////
